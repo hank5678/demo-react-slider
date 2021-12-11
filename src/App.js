@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Slider from "./Slider"
+import img1 from "./images/img1.jpg"
+import img2 from "./images/img2.jpg"
+import img3 from "./images/img3.jpg"
+
+const data = [
+  {
+    key: 1,
+    src: img1,
+  },
+  {
+    key: 2,
+    src: img2,
+  },
+  {
+    key: 3,
+    src: img3,
+  },
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Slider data={data} />
+    </>
+  )
 }
 
-export default App;
+export default App
